@@ -1,6 +1,6 @@
 # crud-angular-university-enigma
 
-Basic Aggular and SPringboot
+* Basic Aggular and SPringboot
 
 ``Running springboot mvn spring-boot:run``
 
@@ -14,4 +14,4 @@ Basic Aggular and SPringboot
 
 ``copy folder dist /var/www/html/``
 
-** sample /var/www/html/dist/crud-angular-university
+* sample /var/www/html/dist/crud-angular-university
