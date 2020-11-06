@@ -1,0 +1,24 @@
+<table class="table table-dark">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">NIM</th>
+    <th scope="col">Name</th>
+    <th scope="col">Address</th>
+    <th scope="col">Umur</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Major Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let major of loadedPosts">
+    <th>{{major.id}}</th>
+    <th>{{major.nim}}</th>
+    <th>{{major.name}}</th>
+    <th>{{major.address}}</th>
+    <th>{{major.birthdate | age}}</th>
+    <th>{{major.gender}}</th>
+    <th>{{major.major.majorName}}</th>
+  </tr>
+  </tbody>
+</table>

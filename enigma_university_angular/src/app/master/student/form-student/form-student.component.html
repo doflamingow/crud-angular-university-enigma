@@ -1,0 +1,108 @@
+<div class="container mt-3 panel-body">
+  <form [formGroup]="studentForm" method="post" (ngSubmit)="submit(studentForm.value, studentForm.valid)">
+    <div class="form-group">
+      <div class="form-group">
+        <label for="nim">Nomor Induk Mahasiswa{{form('nim').invalid ? '*' : ''}}</label>
+        <input type="text" class="form-control" formControlName="nim" id="nim" placeholder="Nomor Induk Mahasiswa">
+        <small class="float-right">
+          {{form('nim').value?form('nim').value.length>12?12:form('nim').value.length: 0}}/12
+        </small>
+        <small *ngIf="form('nim').invalid && (form('nim').dirty || form('nim').touched)"
+               class="form-text text-danger">
+          <div *ngIf="form('nim').errors?.required">
+            This field is required.
+          </div>
+          <div *ngIf="form('nim').errors?.minlength">
+            NIM can't less than 12 character.
+          </div>
+        </small>
+      </div>
+      <label for="name">Nama Lengkap{{form('name').invalid ? '*' : ''}}</label>
+      <input type="text" class="form-control" formControlName="name" id="name" placeholder="Nama Lengkap">
+          <small class="float-right">
+        {{form('name').value?form('name').value.length>50?50:form('name').value.length: 0}}/50
+      </small>
+      <small *ngIf="form('name').invalid && (form('name').dirty || form('name').touched)"
+             class="form-text text-danger">
+        <div *ngIf="form('name').errors?.required">
+          This field is required.
+        </div>
+        <div *ngIf="form('name').errors?.maxlength">
+          Name must maximum 50 character.
+        </div>
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="address">Alamat{{form('address').invalid ? '*' : ''}}</label>
+      <input type="text" class="form-control" formControlName="address" id="address" placeholder="Alamat">
+      <small class="float-right">
+        {{form('address').value?form('address').value.length>50?50:form('address').value.length: 0}}/50
+      </small>
+      <small *ngIf="form('address').invalid && (form('address').dirty || form('address').touched)"
+             class="form-text text-danger">
+        <div *ngIf="form('address').errors?.required">
+          This field is required.
+        </div>
+        <div *ngIf="form('address').errors?.maxlength">
+          Address must maximum 50 character.
+        </div>
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="birthdate">Tanggal Lahir{{form('birthdate').invalid ? '*' : ''}}</label>
+      <input type="date" class="form-control" formControlName="birthdate" id="birthdate" placeholder="Tanggal Lahir">
+      <small *ngIf="form('birthdate').invalid && (form('birthdate').dirty || form('birthdate').touched)"
+             class="form-text text-danger">
+        <div *ngIf="form('birthdate').errors?.required">
+          This field is required.
+        </div>
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="gender">Jenis Kelamin *</label>
+      <br>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" formControlName="gender" id="gender" name="gender" value="Laki-laki">Laki-laki
+        <br>
+        <input class="form-check-input" type="radio" formControlName="gender" id="gender" name="gender" value="Perempuan">Perempuan
+      </div>
+      <small class="form-text text-danger" *ngIf="form('gender').invalid && form('gender').dirty || form('gender').touched" >
+        <div *ngIf="form('gender').errors?.required">
+          This field is required. Please choose one
+        </div>
+      </small>
+    </div>
+<!--    <div class="form-group">-->
+<!--      <label for="gender">Jenis Kelamin</label>-->
+<!--      <input type="text" class="form-control" formControlName="gender" id="gender" placeholder="Jenis Kelamin" >-->
+<!--      <select class="form-control" id="gender" name="gender" placeholder="Jenis Kelamin" >-->
+<!--        <option value="null"></option>-->
+<!--        <option value="boy">Laki-laki</option>-->
+<!--        <option value="girl">Perempuan</option>-->
+<!--      </select>-->
+<!--      <small *ngIf="form('gender').invalid && (form('gender').dirty || form('gender').touched)"-->
+<!--             class="form-text text-danger">-->
+<!--        <div *ngIf="form('gender').errors?.required">-->
+<!--          This field is required.-->
+<!--        </div>-->
+<!--      </small>-->
+<!--    </div>-->
+    <div class="form-group">
+      <label for="major"> Major</label>
+      <select formControlName="major" id="major">
+        <option *ngFor="let major of loadMajor" [ngValue]="major" >
+          {{major.majorName}}
+        </option>
+      </select>
+      <div *ngIf="form('major').invalid &&
+      (form('major').dirty || form('major').touched)"
+           class="form-text text-danger">
+        <div *ngIf="form('major').errors?.required">
+          This Field is required
+        </div>
+      </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

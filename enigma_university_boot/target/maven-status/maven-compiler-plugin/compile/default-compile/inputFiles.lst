@@ -1,0 +1,12 @@
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/EnigmaUniversityBootApplication.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/controller/MajorController.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/entity/Major.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/repository/StudentRepository.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/exception/DataNotFoundException.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/controller/StudentController.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/service/MajorServiceImpl.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/service/StudentServiceImpl.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/entity/Student.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/repository/MajorRepository.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/service/MajorService.java
+/home/arif/Program/Frontend/BelajarAngular/enigma_university/enigma_university_boot/src/main/java/com/enigma/enigma_university_boot/service/StudentService.java

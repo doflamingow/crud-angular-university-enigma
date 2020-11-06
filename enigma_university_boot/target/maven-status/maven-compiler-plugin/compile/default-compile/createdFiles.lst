@@ -1,0 +1,12 @@
+com/enigma/enigma_university_boot/EnigmaUniversityBootApplication.class
+com/enigma/enigma_university_boot/service/MajorService.class
+com/enigma/enigma_university_boot/entity/Major.class
+com/enigma/enigma_university_boot/exception/DataNotFoundException.class
+com/enigma/enigma_university_boot/controller/StudentController.class
+com/enigma/enigma_university_boot/service/StudentService.class
+com/enigma/enigma_university_boot/repository/StudentRepository.class
+com/enigma/enigma_university_boot/service/StudentServiceImpl.class
+com/enigma/enigma_university_boot/controller/MajorController.class
+com/enigma/enigma_university_boot/repository/MajorRepository.class
+com/enigma/enigma_university_boot/service/MajorServiceImpl.class
+com/enigma/enigma_university_boot/entity/Student.class

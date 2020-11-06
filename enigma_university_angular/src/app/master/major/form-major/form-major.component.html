@@ -1,0 +1,21 @@
+<div class="container mt-3 panel-body">
+  <form [formGroup]="majorFrom" method="post" (ngSubmit)="submit(majorFrom.value, majorFrom.valid)">
+    <div class="form-group">
+      <label for="majorName">Nama Jurusan{{form('majorName').invalid ? '*' : ''}}</label>
+      <input type="text" class="form-control" formControlName="majorName" id="majorName" placeholder="Nama Jurusan">
+      <small class="float-right">
+        {{form('majorName').value?form('majorName').value.length>30?30:form('majorName').value.length: 0}}/30
+      </small>
+      <small *ngIf="form('majorName').invalid && (form('majorName').dirty || form('majorName').touched)"
+             class="form-text text-danger">
+        <div *ngIf="form('majorName').errors?.required">
+          This field is required.
+        </div>
+        <div *ngIf="form('majorName').errors?.maxlength">
+          Major name maximum 30 character.
+        </div>
+      </small>
+    </div>
+    <button [disabled]="majorFrom.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
