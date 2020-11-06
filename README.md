@@ -2,4 +2,4 @@
 
 Basic ANgular and SPringboot
 
-``Running springboot mvnspringboot:run``
+``Running springboot mvn-springboot:run``
